@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ── Design Tokens ───────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-deep:     #0a0a14;
+  --bg-mid:      #0f0f20;
+  --bg-elevated: #131326;
+
+  /* Glass */
+  --glass:        rgba(16, 16, 35, 0.65);
+  --glass-hi:     rgba(25, 25, 55, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --glass-border-h: rgba(255, 255, 255, 0.13);
+
+  /* Accent palette */
+  --purple:   #aa3bff;
+  --purple-d: #8825ee;
+  --cyan:     #22d3ee;
+  --mint:     #4ade80;
+  --amber:    #fbbf24;
+  --pink:     #f472b6;
+  --red:      #f87171;
+
+  /* Text */
+  --text-h:     #f3f4f6;
+  --text:       #9ca3af;
+  --text-muted: #6b7280;
+
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, #aa3bff 0%, #22d3ee 100%);
+  --grad-bg:      linear-gradient(160deg, #0a0a14 0%, #0f0f20 100%);
+
+  /* Radii */
+  --r-xs:   6px;
+  --r-sm:   10px;
+  --r-md:   16px;
+  --r-lg:   24px;
+  --r-xl:   32px;
+  --r-pill: 9999px;
+
+  /* Shadows */
+  --shadow-card:   0 4px 32px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-card-h: 0 8px 48px rgba(170,59,255,0.22), 0 2px 12px rgba(0,0,0,0.35);
+  --shadow-glow-p: 0 0 22px rgba(170,59,255,0.45);
+  --shadow-glow-c: 0 0 22px rgba(34,211,238,0.45);
+  --shadow-glow-m: 0 0 14px rgba(74,222,128,0.5);
+
+  /* Fonts */
+  --font-head: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  /* Legacy aliases (so old classes still resolve) */
+  --sans:         var(--font-head);
+  --mono:         var(--font-mono);
+  --accent:       var(--purple);
+  --accent-hover: var(--purple-d);
+  --accent-dim:   rgba(170, 59, 255, 0.12);
+  --border:       var(--glass-border);
+  --success:      var(--mint);
+  --success-dim:  rgba(74, 222, 128, 0.12);
+  --error:        var(--red);
+  --error-dim:    rgba(248, 113, 113, 0.12);
+  --warning:      var(--amber);
+  --radius-sm:    var(--r-sm);
+  --radius-md:    var(--r-md);
+  --radius-lg:    var(--r-lg);
+  --shadow-nav:   0 1px 0 rgba(255,255,255,0.04);
+  --bg-surface:   rgba(255, 255, 255, 0.04);
+  --text-h:       #f3f4f6;
+  --bg-card:      var(--glass);
+  --bg:           var(--bg-deep);
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-deep);
+  color: var(--text-h);
+  font: 16px/1.65 var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--text-h);
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+p  { margin: 0; }
+a  { color: inherit; }
+button { font-family: var(--font-body); cursor: pointer; }
+
+/* Reduced-motion: collapse all animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

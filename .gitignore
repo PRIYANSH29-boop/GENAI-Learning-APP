@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+server/node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Environment files (never commit secrets)
+.env
+server/.env
+backend/.env
+
+# Build output
+dist/
+frontend/dist/
+
+# Hardhat artifacts & cache
+backend/artifacts/
+backend/cache/
+backend/ignition/deployments/
+artifacts/
+cache/
+
+# Hardhat config variables (contains private keys / RPC secrets)
+backend/hardhat_vars.json
+
+# Database files
+*.db
+genai.db
+server/genai.db
+server/genai.db-shm
+server/genai.db-wal
+
+# Claude Code settings
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
